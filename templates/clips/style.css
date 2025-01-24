@@ -1,0 +1,134 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
+}
+
+.card {
+  animation: 2s gradient-angle infinite linear;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#584827, #2d230f),
+    conic-gradient(
+      from var(--gradient-angle),
+      #584827 0%,
+      #c7a03c 37%,
+      #f9de90 30%,
+      #c7a03c 33%,
+      #584827 40%,
+      #584827 50%,
+      #c7a03c 77%,
+      #f9de90 80%,
+      #c7a03c 83%,
+      #584827 90%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 1turn;
+  }
+}
+
+/* その他 */
+html,
+body {
+  background: #141819;
+  zoom: 95%;
+}
+
+body {
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  display: grid;
+  align-content: center;
+  min-height: 100svh;
+  padding: 24px;
+  color: #d5cec0;
+  gap: 24px;
+
+  @media (width < 970px) {
+    align-content: start;
+  }
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+  grid-auto-flow: column;
+  gap: 16px 40px;
+  @media (width < 970px) {
+    grid-auto-flow: row;
+  }
+}
+
+.card {
+  display: grid;
+  max-width: 700px;
+  padding: 20px;
+  text-decoration: none;
+  color: currentColor;
+  border-radius: 20px;
+  place-content: center;
+  place-items: center;
+  aspect-ratio: 1/1;
+  row-gap: 16px;
+}
+
+.card h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+/* こんにちわんこそば！キラキラ✨ホームページエンジニアのとんこつおじさんだよ！ */
+
+.sec02 {
+    text-align: center; /* Centraliza o conteúdo na seção */
+}
+
+.imgcenter {
+    max-width: 50%; /* Ajuste a largura da imagem (em % ou px) */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para que `margin` funcione */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+.header {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between; /* Espaço entre os elementos */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #333; /* Cor de fundo opcional */
+    color: aliceblue; /* Cor do texto */
+}
+
+.text {
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    margin: 0 auto; /* Centraliza o texto dentro do Flexbox */
+}
+
+.back-button {
+    padding: 10px 20px; /* Tamanho do botão */
+    font-size: 1rem; /* Tamanho do texto do botão */
+    color: white; /* Cor do texto */
+    background-color: #000000; /* Cor do botão */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s; /* Efeito no hover */
+}
+
+.back-button:hover {
+    background-color: #250013; /* Cor mais escura no hover */
+}
+
